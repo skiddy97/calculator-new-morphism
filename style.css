@@ -1,0 +1,117 @@
+:root {
+    --calcWidth: 700px;
+    --primary-color: #003344;
+    --secondary-color: #001323;
+}
+
+* {
+    font-family: arial, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--secondary-color);
+    width: 100vw;
+    height: 100vh;
+}
+
+.calculator {
+    max-width: var(--calcWidth);
+    height: auto;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden
+}
+
+.grid__button {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-block: 20px;
+    gap: 10px;
+    max-height: 400px;
+
+    max-width: calc(var(--calcWidth));
+
+
+    margin-inline: 20px;
+}
+
+.display {
+    max-width: auto;
+    margin-inline: 20px;
+    margin-block: 20px;
+    height: 80px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+
+}
+
+.button {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 70px;
+    border-radius: 5px;
+    color: white;
+    box-shadow: -2px -3px 10px #054b62cc,
+        3px 3px 10px #001323cc;
+}
+
+.button:active {
+    box-shadow: inset -2px -3px 10px #054b62,
+        inset 3px 3px 10px #001323,
+        0px 0px 0px #054b62,
+        0px 0px 0px #001323;
+}
+
+.button.active {
+    box-shadow: inset -2px -3px 10px #054b62,
+        inset 3px 3px 10px #001323,
+        0px 0px 0px #054b62,
+        0px 0px 0px #001323;
+}
+
+
+
+.button__grid__2row {
+    grid-row: 4/6;
+    grid-column: 5/6;
+    line-height: 150px;
+}
+
+.display {
+    display: grid;
+    color: white;
+    text-align: end;
+    padding-inline: 20px;
+    padding-block: 5px;
+}
+
+#process {
+    font-size: 2.5rem;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.line {
+
+
+    width: 100%;
+    height: .5px;
+    background-color: #fff4;
+}
